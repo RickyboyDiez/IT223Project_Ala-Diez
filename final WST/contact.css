@@ -5,7 +5,7 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-color: #fff;
+  background-color: #011b40;
   
 }
 
@@ -88,7 +88,7 @@ body{
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px solid #000000;
+  border-bottom: 3px solid #e0d26a;
   outline: none;
   font-size: 18px;
   color: #000000;
@@ -99,6 +99,10 @@ body{
   display: flex;
   justify-content: center;
   margin: 0px 25px;
+}
+
+::placeholder {
+  color: #e0d26a;
 }
 
 button {
@@ -119,7 +123,8 @@ button a {
 
 .info {
   flex: 50%;
-  background-color: #cdb9a1;
+  background-color: #06315e;
+  color: #e0d26a;
   border: 1px #707070 solid;
   border-radius: 20px;
 }
