@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="acadstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class ="nav">   
+      <a class="logo" href="#"><img src="logo.png" alt="Logo"></a>
+      <a href="#">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a  href="blog.html">Blog</a>
+      <a  href="login.html">Log In</a>
+      
+    
+  </div>
+  
+    <div class = "header">
+        <h6>Academic <br> Server</h6>
+    </div>
+    <div class="logovid">
+        <video autoplay loop muted src="logovid.mp4"></video>
+    </div>   
+    <div class="tagline">
+        <h6 class="sline">Unleash Innovation, Empower Discovery:</h6>
+        <h6 class="pline">Academic Server at your Service!</h6>
+    </div>
+    <div class="services">
+      <div class="logos1">
+        <img src="css logo.png" alt="">
+        <img src="java logo.png" alt="">
+      </div>
+      <div class="service">
+        <h5>Services</h5>
+        <p>Our services include programming languages like HTML, JAVA, and more!  </p>
+        <button class ="serviceb"><a href="" target="_blank">Learn More</a></button>
+      </div>
+      <div class="logos2">
+        <img src="html logo.png" alt="">
+        <img src="python logo.png" alt="">
+      </div>
+    </div>
+    <div class="blogs">
+        <div class="blog">
+          <h5>BLOG</h5>
+          <p>This page is Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, nam. Dignissimos, minima! Voluptate esse sit aut quis voluptatem debitis corporis praesentium! Facere iusto odit consectetur aliquid harum quod aspernatur assumenda, eos animi voluptatem molestias alias dolorum eveniet, quos nam asperiores placeat mollitia illum error fuga quidem dolor atque? Tenetur, neque.</p>
+          <button class ="blogb"><a href="" target="_blank">Learn More</a></button>
+        </div>
+        <div class="empty"></div>
+    </div>
+
+    <div class="signup">
+      <div class="sform">
+        <div class="signin">
+          <h5>Sign Up</h5>
+        </div>
+        <div class="inputs">
+          <input type="text" class="input" placeholder="Name" required>
+          <input type="text" class="input" placeholder="Email" required>
+          <input type="text" class="input" placeholder="Password" required>  
+        </div>
+        <button type="submit" class="submit">Signup</button>
+      </div>
+      <div class="sinfo">
+        <h5 class="acad">Academic</h5>
+        <h5 class="server">Server</h5>
+        <p>Get involved and make a difference by logging in to our community!</p>
+      </div>
+    </div>
+
+    <div class = "footer">
+        <div class="about">
+          <h5>Acad Server</h5>
+          <p>Acad Server is an online programming commission website Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci consequatur tempora consequuntur porro consectetur aliquam architecto numquam sequi dolore sunt? Dolorem necessitatibus odio in animi reiciendis facilis at eveniet fugit perferendis, atque repellendus doloribus. Sunt magni est accusamus rem consequuntur minus voluptate distinctio. Accusantium impedit unde harum repudiandae saepe perspiciatis, aperiam odit explicabo quibusdam veniam molestias, suscipit iure error. Ut, minima. Obcaecati ipsa explicabo sunt numquam rem quas corrupti esse!</p>
+        </div>
+        <div class="menu">
+          <h5>Main Menu</h5>
+          <a href="acad.html">Home</a>
+          <a href="blog.html">Blog</a>
+          <a href="request.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="address">
+          <h5>Address</h5>
+          <p>Lawesbra, Lapasan, Cagayan de Oro City, <br>Philippines</p>
+          <p>Tulip8162@gmail.com</p>
+          <p>0905 815 4494</p>
+          <div class="logos">
+            <a href="https://www.fb.me/aurorahyhy08"><img src="ico-fb.png" alt=""></a>
+            <a href="ig"><img src="ico-ig.png" alt=""></a>
+            <a href="tw"><img src="ico-twitter.png" alt=""></a>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+      window.addEventListener('scroll', function() {
+  const nav = document.querySelector('nav');
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 100) { /* adjust this value to change when the class is applied */
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+    </script>
+</body>
+</html>
