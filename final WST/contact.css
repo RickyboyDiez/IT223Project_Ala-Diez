@@ -3,7 +3,7 @@
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   margin: 0;
   background-color: #011b40;
   
@@ -20,7 +20,7 @@ body{
   overflow: hidden;
   top: 0;
   text-align: center;
-  background-color: #240c0a;
+  background-color: #06315e;
 }
 
   
@@ -65,16 +65,20 @@ body{
   font-size: 30px;
   text-align: center;
   margin-bottom: 0px;
+  color: #e0d26a;
 }
 
 .contact p {
   font-size: 16x;
   text-align: center;
+  color: #e0d26a;
+  margin-bottom: 40px;
 }
 
 .row2 {
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .fillup {
@@ -84,7 +88,7 @@ body{
 .input {
   margin: 20px 30px;
   padding: 10px 0;
-  width: 90%;
+  width: 80%;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -102,23 +106,26 @@ body{
 }
 
 ::placeholder {
-  color: #e0d26a;
+  color: #e0d26a56;
 }
 
 button {
-  background-color: white;
+  background-color: transparent;
   padding: 10px;
-  border-radius: 25px;
-  border: 3px #240c0a solid;
+  border: 3px #2099f2 solid;
 }
 
 button a {
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
   font-size: 15px;
   font-weight: bold;
-  color: #a77d54;
+  color: #2099f2;
   padding: 0px 20px;
+}
+
+button:hover {
+  background-color: #209af263;
 }
 
 .info {
@@ -127,6 +134,7 @@ button a {
   color: #e0d26a;
   border: 1px #707070 solid;
   border-radius: 20px;
+  max-width: 90%;
 }
 
 .info h5 {

@@ -3,9 +3,9 @@
 }
 
 body{
-  font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
   margin: 0;
-  background-color: #5f84a2;
+  background-color: #011b40;
   
 }
 .header{
@@ -23,8 +23,7 @@ body{
   margin-top: -180px;
 }
 .header h6{
-font-size: 80px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 100px;
   font-weight: 1;
   color: #e0d26a;
   
@@ -63,35 +62,44 @@ font-size: 80px;
   display: flex;
   flex-wrap: wrap;
   text-align: justify;
+  
 }
 
 .blog1 {
   flex: 50%;
   padding: 60px;
+  color: #011b40;
   background-color: #e0d26a;
 }
 
 .blog2 {
   flex: 50%;
   padding: 60px;
-  background-color: #239aed;
+  color: #e0d26a;
+  background-color: #011b40;
+  padding-bottom: 100px;
 }
 
 .blogs h5 {
   font-size: 28px;
 }
-
+.blog1 p{
+  text-align: justify;
+}
+.blog2 p{
+  text-align: justify;
+}
 .info1{
   display: flex;
   flex-wrap: wrap;
-  background-image: url(aur\ \(3\).jpg);
+  background-image: url(au10.png);
   background-size: cover;
   padding: 175px 0px;
   /* padding-left: 50px; */
   /* padding-right: 800px; */
   color: white;
   text-align: justify;
-  font-family:"Times New Roman', Times, serif";
+  font-family: monospace;
 }
 
 .info h5 {
@@ -104,7 +112,7 @@ font-size: 80px;
   flex: 35%;
   right: 40px;
   padding: 20px 25px;
-  background-color: #a57e5554;
+  background-color: #beab1e75;
 }
 
 .empty {
@@ -115,14 +123,14 @@ font-size: 80px;
 .info2{
   display: flex;
   flex-wrap: wrap;
-  background-image: url(aur\ \(2\).jpg);
+  background-image: url(aur\ \(2\).png);
   background-size: cover;
   padding: 170px 0px;
   /* padding-left: 50px; */
   /* padding-right: 800px; */
   color: white;
   text-align: justify;
-  font-family:"Times New Roman', Times, serif";
+  font-family: monospace;
 }
 
 .infoo h5 {
@@ -135,9 +143,78 @@ font-size: 80px;
   flex: 35%;
   left: 40px;
   padding: 20px 25px;
-  background-color: #a57e5554;
+  background-color: #011b40a6;
 }
-
+.info1 p{
+  text-align: justify;
+}
+.info2 p{
+  text-align: justify;
+}
 .empty2 {
   flex: 65%;
+}
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #e0d26a;;
+  padding: 10px;
+  background-color: #00122b;
+}
+
+.footer .about{
+flex: 60%;
+text-align: left;
+padding-right: 100px;
+}
+
+.footer h5 {
+  font-size: 20px;
+}
+
+.footer p {
+text-align: justify;
+color: #fff;
+font-size: 16px;
+}
+
+.footer .menu {
+flex: 15%;
+text-align: left;
+}
+
+.footer .menu a {
+display: flex;
+justify-content: left;
+text-decoration: none;
+color: white;
+font-size: 20px;
+}
+
+.footer .address {
+flex: 25%;
+}
+
+.footer .address h5, p {
+display: flex;
+justify-content: left;
+text-align: left;
+text-decoration: none;
+}
+
+
+
+
+
+.logos {
+display: flex;
+justify-content: left;
+}
+
+.logos img{
+height: 30px;
+width: auto;
+margin: 5px 10px;
 }

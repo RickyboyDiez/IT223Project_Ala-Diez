@@ -3,13 +3,13 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
     margin: 0;
     background-color: #011b40;
     
 }
 .header{
-    background-image: url("aur\ \(5\).jpg");
+    background-image: url(aur\ \(5\)2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left ;
@@ -29,8 +29,8 @@ body{
 
 .header h6{
   font-size: 80px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 1;
+  font-family: monospace;
+  font-weight: 10px;
   color: #ffffff;
 }   
 
@@ -47,10 +47,11 @@ body{
 
 .header button {
   background-color: transparent;
-  padding: 15px;
+  padding: 5px 20px;
   border-radius: 0px;
   border: 1px #f96428 solid;
   margin-bottom: 50px;
+  
 }
 
 .header a{
@@ -138,6 +139,14 @@ img{
   flex: 34%;
 }
 
+.logos1 video {
+  width: 200px;
+}
+
+.logos2 video {
+  width: 200px;
+}
+
 .services img {
   width: 150px;
 }
@@ -149,6 +158,7 @@ img{
 .service h5 {
   font-size: 30px;
   margin-top: 0px;
+  margin-bottom: 20px;
   color: #e0d26a;
 }
 
@@ -164,6 +174,7 @@ img{
   padding: 15px;
   border-radius: 0px;
   border: 1px #e0d26a solid;
+  margin-top: 30px;
 }
 
 .logos2 {
@@ -183,18 +194,15 @@ img{
 }
 
 .blogs h5 {
-  font-size: 50px;
+  font-size: 80px;
   text-align: center;
-  color: #239aed;
+  color: #e0d26a;
   margin: 30px 0px;
+  padding: 50px 0px;
 }
 
-.blogs p {
-  font-size: 17px;
-  text-align: justify;
-  color: #e0d26a;
-}
 .blog {
+  text-align: center;
   flex: 35%;
   padding-left: 50px;
   background-color: transparent;
@@ -204,19 +212,70 @@ img{
   flex: 65%;
 }
 
-button {
-  background-color: #239aed;
+ button {
+  background-color: transparent;
   padding: 15px;
-  border-radius: 85px;
-  border: 0px;
+  border: 3px #e0d26a solid;
 }
+
+button:hover {
+  background-color: #e0d26a;
+  border: 3px #2399ed00 solid;
+
+}
+
+button a:hover {
+  color: #011b40  ;
+} 
 
 button a {
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
-  color: #fff;
+  color: #f8eb89;
 }
+
+/* button a{
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  position: relative;
+  background-color: transparent;
+}
+button::before{
+  position: absolute;
+  content: '';
+  border-top: #fff solid 3px;
+  border-left: #fff solid 3px ;
+  height: 10%;
+  width: 30%;
+  top: -3px;
+  left: -3px;
+  transition: 0.3s all ease-in-out;
+}
+button::after{
+  position: absolute;
+  content: '';
+  border-top: #fff solid 3px;
+  border-right: #fff solid 3px ;
+  height: 10%;
+  width: 30%;
+  top: -3px;
+  left: -3px;
+  transition: 0.3s all ease-in-out;
+}
+button:hover{
+  color: #f96428;
+}
+button:hover:before,
+button:hover::after{
+  width: 100%;
+  height: 105%;
+  border-color: #f96428;
+
+} */
+
+
 
 #signup {
   display: flex;
@@ -232,7 +291,7 @@ button a {
   flex: 50%;
   padding: 30px;
   background-color: #06315e;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   margin: 20px 0px;
   margin-left: 20px;
   max-width: 40%;
@@ -250,27 +309,32 @@ button a {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 5px solid #e0d26a;
+  border-bottom: 3px solid #0d85da;
   outline: none;
-  color: #e0d26a;
+  color: #10b9be8f;
   font-size: 18px;
   background: transparent;
 }
 
 ::placeholder {
-  color: #e0d26a;
+  color: #2399ed27;
 }
 
 #signup button {
-  background-color: #e0d26a;
-  color: #011b40;
+  background-color: transparent;
+  color: #e0d26a;
   font-size: 20px;
   font-weight: bold;
   padding: 15px;
-  border-radius: 85px;
   margin-top: 5px;
   width: 100%;
-  border: 0px;
+  border: 3px #e0d26a solid;
+  border-radius: 0px;
+}
+
+#signup button:hover {
+  background-color: #e0d26a;
+  color: #011b40;
 }
 
 .sinfo {
@@ -283,7 +347,8 @@ button a {
 .sinfo .acad {
   font-size: 50px;
   color: #239aed;
-  margin: 10px 0px;
+  margin-top: 75px;
+  margin-bottom: 10px;
 }
 
 .sinfo .server {
@@ -301,46 +366,52 @@ button a {
 
 
 .footer{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    color: #e0d26a;;
-    padding: 10px;
-    background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #e0d26a;;
+  padding: 10px;
+  background-color: #00122b;
 }
 
 .footer .about{
-  flex: 60%;
-  text-align: left;
-  padding-right: 100px;
+flex: 60%;
+text-align: left;
+padding-right: 100px;
+}
+
+.footer h5 {
+  font-size: 20px;
 }
 
 .footer p {
-  text-align: justify;
-  color: #fff;
+text-align: justify;
+color: #fff;
+font-size: 16px;
 }
 
 .footer .menu {
-  flex: 15%;
+flex: 15%;
 text-align: left;
 }
 
 .footer .menu a {
-  display: flex;
-  justify-content: left;
-  text-decoration: none;
-  color: white;
+display: flex;
+justify-content: left;
+text-decoration: none;
+color: white;
+font-size: 20px;
 }
 
 .footer .address {
-  flex: 25%;
+flex: 25%;
 }
 
 .footer .address h5, p {
-  display: flex;
-  justify-content: left;
-  text-align: left;
-  text-decoration: none;
+display: flex;
+justify-content: left;
+text-align: left;
+text-decoration: none;
 }
 
 
@@ -358,7 +429,7 @@ text-align: left;
   margin: 5px 10px;
   }
 
-@media screen and (max-width: 630px){
+@media screen and (max-width: 725px){
   
   .nav {
     position: relative;
@@ -375,7 +446,7 @@ text-align: left;
     }
     
   .header {
-    margin-top: -385px;
+    margin-top: -425px;
     padding-top: 200px;
     text-align: center;
   }
@@ -385,3 +456,11 @@ text-align: left;
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 599px) {
+  .services{
+      margin: 0px 150px;
+      flex-direction: column;
+  }
+}
+
