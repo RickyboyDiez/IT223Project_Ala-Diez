@@ -57,6 +57,7 @@ body{
 .header a{
   font-size: 25px;
   color: #f96428;
+  text-decoration: none;
 }
 
 .logo img {
@@ -175,6 +176,9 @@ img{
   border-radius: 0px;
   border: 1px #e0d26a solid;
   margin-top: 30px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .logos2 {
@@ -212,27 +216,21 @@ img{
   flex: 65%;
 }
 
- button {
+.blog button {
   background-color: transparent;
   padding: 15px;
-  border: 3px #e0d26a solid;
-}
-
-button:hover {
-  background-color: #e0d26a;
-  border: 3px #2399ed00 solid;
-
-}
-
-button a:hover {
-  color: #011b40  ;
-} 
-
-button a {
+  border: 3px #e0d26a solid;  
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
   color: #f8eb89;
+}
+
+.blog button:hover {
+  color: #011b40  ;  
+  background-color: #e0d26a;
+  border: 3px #2399ed00 solid;
+  cursor: pointer;
 }
 
 /* button a{
@@ -365,7 +363,7 @@ button:hover::after{
 }
 
 
-.footer{
+#footer{
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -374,28 +372,28 @@ button:hover::after{
   background-color: #00122b;
 }
 
-.footer .about{
+#footer .about{
 flex: 60%;
 text-align: left;
 padding-right: 100px;
 }
 
-.footer h5 {
+#footer h5 {
   font-size: 20px;
 }
 
-.footer p {
+#footer p {
 text-align: justify;
 color: #fff;
 font-size: 16px;
 }
 
-.footer .menu {
+#footer .menu {
 flex: 15%;
 text-align: left;
 }
 
-.footer .menu a {
+#footer .menu a {
 display: flex;
 justify-content: left;
 text-decoration: none;
@@ -403,11 +401,11 @@ color: white;
 font-size: 20px;
 }
 
-.footer .address {
+#footer .address {
 flex: 25%;
 }
 
-.footer .address h5, p {
+#footer .address h5, p {
 display: flex;
 justify-content: left;
 text-align: left;
@@ -450,17 +448,51 @@ text-decoration: none;
     padding-top: 200px;
     text-align: center;
   }
+
+  #signup {
+    display:flex;
+    justify-content: center;
+  }
 }
+
+
 @media screen and (max-width: 700px) {
-    .row{
-        flex-direction: column;
+    .blogs {
+      flex-direction: column;
     }
+
+    .signup {
+      display: flex;
+      text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 599px) {
+  
+  .header {
+    margin-top: -252px;
+  }
+
+  .header h6 {
+    font-size: 50px;
+  }
+  
+  .tagline h6 {
+    font-size: 50px;
+  }
+
+  .blogs h5 {
+    font-size: 50px;
+  }
+  
   .services{
       margin: 0px 150px;
       flex-direction: column;
+  }
+
+  .sform {
+    width: 500px;
   }
 }
 

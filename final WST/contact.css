@@ -49,6 +49,8 @@ body{
 }
 
 .aside {
+  background-image: url(aur\ \(5\)\ -\ Copy.jpg);
+  background-size: cover;
   flex: 30%;
 }
 
@@ -95,7 +97,7 @@ body{
   border-bottom: 3px solid #e0d26a;
   outline: none;
   font-size: 18px;
-  color: #000000;
+  color: #2099f2;
   background: transparent;
 }
 
@@ -174,3 +176,21 @@ button:hover {
   width: auto;
   margin: 15px 10px;
   }
+
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav a {
+    float: none;
+    text-align: center;
+  }
+}

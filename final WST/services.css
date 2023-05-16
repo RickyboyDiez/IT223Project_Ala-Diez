@@ -37,8 +37,8 @@ font-size: 80px;
 }
 
 .nav {
-  position: sticky;
-  overflow: hidden;
+  position:static;
+  overflow:hidden;
   top: 0;
   text-align: center;
   margin-right: 200px;
