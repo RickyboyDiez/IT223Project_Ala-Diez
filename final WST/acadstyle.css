@@ -471,7 +471,7 @@ text-decoration: none;
 @media screen and (max-width: 599px) {
   
   .header {
-    margin-top: -252px;
+    margin-top: 0px;
   }
 
   .header h6 {
@@ -479,11 +479,11 @@ text-decoration: none;
   }
   
   .tagline h6 {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .blogs h5 {
-    font-size: 50px;
+    font-size: 30px;
   }
   
   .services{
