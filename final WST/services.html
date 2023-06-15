@@ -13,7 +13,7 @@
     <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
     <a  href="blog.html">Blog</a>
-    <a  href="acad.html#signup">Log In</a>
+    <a  href="acad.html#signup" id="login">Log In</a>
     
 </div>
 
@@ -30,15 +30,17 @@
         <div class="option_inner html">
           <div class="tickmark"></div>
           <div class="logo"><img src="html logo.png" alt=""></div>
-          <div class="name">HTML (HyperText Markup Language) is the standard markup language used to create and structure content on the web.</div>
+          <div class="name">HTML</div>
+          <div class="name2">HyperText Markup Language is the standard markup language used to create and structure content on the web.</div>
         </div>
       </label>
       <label class="option_item">
-        <input type="checkbox" class="checkbox" checked>
+        <input type="checkbox" class="checkbox">
         <div class="option_inner css">
           <div class="tickmark"></div>
           <div class="logo"><img src="css logo.png" alt=""></div>
-          <div class="name">CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation and formatting of HTML or XML documents, including colors, fonts, layout, and more.</div>
+          <div class="name">CSS</div>
+          <div class="name2">Cascading Style Sheets is a style sheet language used to describe the presentation and formatting of HTML or XML documents, including colors, fonts, layout, and more.</div>
         </div>
       </label>
       <label class="option_item">
@@ -46,37 +48,168 @@
         <div class="option_inner js">
           <div class="tickmark"></div>
           <div class="logo"><img src="js logo.png" alt=""></div>
-          <div class="name">JavaScript is a high-level programming language used primarily to create interactive and dynamic web content, as well as server-side applications.</div>
+          <div class="name">JavaScript</div>
+          <div class="name2">It is a high-level programming language used primarily to create interactive and dynamic web content, as well as server-side applications.</div>
         </div>
       </label>
       <label class="option_item">
-        <input type="checkbox" class="checkbox" checked>
+        <input type="checkbox" class="checkbox">
         <div class="option_inner python">
           <div class="tickmark"></div>
           <div class="logo"><img src="python logo.png" alt=""></div>
-          <div class="name">Python is an interpreted, object-oriented programming language known for its simplicity and readability. It emphasizes code readability and has a large standard library that makes it versatile for various applications.</div>
+          <div class="name">Python</div>
+          <div class="name2">It is an interpreted, object-oriented programming language known for its simplicity and readability. It emphasizes code readability and has a large standard library that makes it versatile for various applications.</div>
         </div>
       </label>
       <label class="option_item">
-        <input type="checkbox" class="checkbox" checked>
+        <input type="checkbox" class="checkbox">
         <div class="option_inner java">
           <div class="tickmark"></div>
           <div class="logo"><img src="java logo.png" alt=""></div>
-          <div class="name">Java is a general-purpose, class-based, object-oriented programming language that is designed to be portable and platform-independent, and used for developing a wide range of applications.</div>
+          <div class="name">Java</div>
+          <div class="name2">It is a general-purpose, class-based, object-oriented programming language that is designed to be portable and platform-independent, and used for developing a wide range of applications.</div>
+
         </div>
       </label>
     </div>
     
   </div>
-  <div class="message">
-    <form>
-      <label>Additional Information:</label>
-      <input type="text" id="message">
-      
-      <input type="submit" value="Continue">
-    </form>
+
+  <div id="selectedItems">
+    <h3>Selected Items:</h3>
+    <ul id="itemList"></ul>
+    <p id="totalAmount">Total Amount: $0</p>
+  </div>
+
+  <div class="selectPayment">
+    <h5>Select Payment Method:</h5>
+  </div>
+
+  <div id="payment-div"> 
+    <div class="payment-method" onclick="selectPayment('Gcash')">
+        <img src="logo gcash.png" alt="GCash" width="100" height="100">
+    </div>
+    <div class="payment-method" onclick="selectPayment('Grabpay')">
+        <img src="logo grabpay.png" alt="PayPal" width="100" height="100">
+    </div>
+    <div class="payment-method" onclick="selectPayment('Paymaya')">
+        <img src="logo paymaya.png" alt="Palawan" width="100" height="100">
+    </div>
+</div>
+
+<div class="message">
+  <form onsubmit="submitForm(event)">
+    <label>Additional Information:</label>
+    <input type="text" id="message" placeholder="Message">
+    <input type="submit" value="Continue">
+  </form>
+</div>
+
+<div id = "footer">
+  <div class="about">
+    <h5>Acad Server</h5>
+    <p>Academic Server, founded in 2023 by two dedicated students from the University of Science and Technology of the Philippines (USTP), is a leading platform committed to revolutionizing the academic experience. Our visionary approach aims to bridge the gap between technology and education, providing students, educators, and researchers with a seamless and enriching learning environment. By fostering collaboration, innovation, and knowledge exchange, Academic Server empowers individuals to thrive in their academic pursuits. Join our vibrant community today and embark on a transformative journey of learning and discovery. </p>
+    </div>
+  <div class="menu">
+    <h5>Main Menu</h5>
+    <a href="acad.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="address">
+    <h5>Address</h5>
+    <p>Lawesbra, Lapasan, Cagayan de Oro City, <br>Philippines</p>
+    <p>Tulip8162@gmail.com</p>
+    <p>0905 815 4494</p>
+    <div class="logos">
+      <a href="https://www.fb.me/aurorahyhy08"><img src="ico-fb.png" alt=""></a>
+      <a href="ig"><img src="ico-ig.png" alt=""></a>
+      <a href="tw"><img src="ico-twitter.png" alt=""></a>
+    </div>
   </div>
 </div>
 
 </body>
+<script>
+
+var checkboxes = document.getElementsByClassName("checkbox");
+  var itemList = document.getElementById("itemList");
+  var totalAmountElement = document.getElementById("totalAmount");
+  var totalAmount = 0;
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener("click", calculateTotal);
+  }
+
+  function calculateTotal() {
+    totalAmount = 0;
+    itemList.innerHTML = "";
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        var label = checkboxes[i].nextElementSibling.getElementsByClassName("name")[0].innerHTML;
+        itemList.innerHTML += "<li>" + label + "</li>";
+        totalAmount += 500;
+      }
+    }
+
+    totalAmountElement.innerHTML = "Total Amount: $" + totalAmount;
+  }
+
+  var selectedPayment = null;
+  var paymethod = "";
+  function selectPayment(paymentMethod) {
+      if (selectedPayment !== null) {
+          selectedPayment.classList.remove("selected");
+      }
+            
+      selectedPayment = document.querySelector(`[onclick="selectPayment('${paymentMethod}')"]`);
+      selectedPayment.classList.add("selected");
+      paymethod = paymentMethod;
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+
+    var message = document.getElementById("message").value;
+
+    console.log("Selected Items:");
+    var selectedItems = itemList.getElementsByTagName("li");
+    for (var i = 0; i < selectedItems.length; i++) {
+      console.log(selectedItems[i].innerHTML);
+    }
+
+    console.log(totalAmountElement.innerHTML);
+    console.log("Selected Payment Method: " + paymethod); 
+    console.log("Additional Information: " + message);
+    alert("Request Sent!");
+  }
+
+
+
+
+  window.addEventListener('DOMContentLoaded', function() {
+      // Retrieve the login element
+      var loginElement = document.getElementById('login');
+
+      // Check if a name exists in local storage and update the login text accordingly
+      var storedName = localStorage.getItem('loggedInName');
+      if (storedName) {
+        loginElement.innerText = storedName;
+      }
+
+      var footerElement = document.getElementById('footer');
+      function reverseProcess() {
+        localStorage.removeItem('loggedInName');
+        loginElement.innerText = 'Log In'; // Reset the login text
+
+        // Append the signup element back to the document body
+        document.body.insertBefore(signupElement, footerElement);
+      }
+
+      // Add event listener to reverse the process when login text is clicked
+      loginElement.addEventListener('click', reverseProcess);
+    });      
+</script>
 </html>

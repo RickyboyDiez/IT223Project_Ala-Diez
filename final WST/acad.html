@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  <button id="scrollToTopButton" class="scroll-to-top-button" title="Scroll to Top">&#8593;</button>
   <div class ="nav">   
       <a class="logo" href="#"><img src="logo.png" alt="Logo"></a>
       <a href="acad.html">Home</a>
@@ -17,14 +18,15 @@
       <a href="contact.html">Contact</a>
       <a  href="blog.html">Blog</a>
       <a  href="acad.html#signup" id="login">Log In</a>
-      
-    
   </div>
+
     <div class = "header">
       <div class="htext">
         <h6 class="haca">Academic</h6>
         <h6 class="hser">Server</h6>
-        <button class ="blogb"><a href="acad.html#footer">Learn More</a></button>
+        <form action="acad.html#footer">
+          <button type="submit" class="headerb">Learn More</button>
+        </form>
       </div>
     </div>
     <div class="logovid">
@@ -34,20 +36,18 @@
         <h6 class="sline">Unleash Innovation, Empower Discovery:</h6>
         <h6 class="pline">Academic Server at your Service!</h6>
     </div>
-    <div class="services">
+    <div class = "logoni">
       <div class="logos1">
-        <video autoplay loop muted src="logos1.mp4"></video>
-        <video autoplay loop muted src="logos2.mp4"></video>
+        <video autoplay loop muted src="logos.mp4"></video>
       </div>
+    </div>
+    <div class="services">
       <div class="service">
         <h5>Services</h5>
         <p>Our services include programming languages like HTML, JAVA, and more!  </p>
         <form action="services.html">
           <button type="submit" class="serviceb">Learn More</button>
-        </form>      </div>
-      <div class="logos2">
-        <video autoplay loop muted src="logos3.mp4"></video>
-        <video autoplay loop muted src="logos4.mp4"></video>
+        </form>      
       </div>
     </div>
     <div class="blogs">
@@ -68,9 +68,9 @@
         <div class="inputs">
           <input type="text" class="input" placeholder="Name" required>
           <input type="text" class="input" placeholder="Email" required>
-          <input type="text" class="input" placeholder="Password" required>  
+          <input type="password" class="input" placeholder="Password" required>  
         </div>
-        <button type="submit" class="submit" onclick='remove()'>Sign Up</button>
+        <button type="submit" class="submit">Sign Up</button>
       </div>
       <div class="sinfo">
         <h5 class="acad">Academic</h5>
@@ -103,29 +103,103 @@
           </div>
         </div>
     </div>
+</body>
+<script>
     
-    <script>
-      function remove () 
-      {
-        var element = document.getElementById("signup");
-        element.remove();
-        var element2 = document.getElementById("login");
-        element2.remove();
-        document.documentElement.scrollTop = 0; 
+      window.addEventListener('DOMContentLoaded', function() {
+      // Retrieve the login element
+      var loginElement = document.getElementById('login');
+
+      // Retrieve the signup element
+      var signupElement = document.getElementById('signup');
+
+      // Add a click event listener to the "Sign Up" button
+      var signUpButton = document.querySelector('.submit');
+      signUpButton.addEventListener('click', function() {
+        // Retrieve the value entered in the "Name" input field
+        var nameInput = document.querySelector('input[placeholder="Name"]');
+        var name = nameInput.value;
+        var emailInput = document.querySelector('input[placeholder="Email"]');
+        var email = emailInput.value;
+        var passwordInput = document.querySelector('input[placeholder="Password"]');
+        var password = passwordInput.value;
+
+      // Display the inputted name, email, and password in the console.log
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Password:', password);
+
+        // Update the login text with the entered name
+        loginElement.innerText = name;
+
+        // Store the entered name in local storage
+        localStorage.setItem('loggedInName', name);
+
+        // Remove the signup element
+        signupElement.remove();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Check if a name exists in local storage and update the login text accordingly
+      var storedName = localStorage.getItem('loggedInName');
+      if (storedName) {
+        loginElement.innerText = storedName;
+        signupElement.remove();
       }
+
+
+
+      // Function to reverse the process and bring back the signup element
+      var footerElement = document.getElementById('footer');
+      function reverseProcess() {
+        localStorage.removeItem('loggedInName');
+        loginElement.innerText = 'Log In'; // Reset the login text
+
+        // Append the signup element back to the document body
+        document.body.insertBefore(signupElement, footerElement);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Add event listener to reverse the process when login text is clicked
+      loginElement.addEventListener('click', reverseProcess);
+      });
+
+
+
       
+      window.addEventListener('scroll', function() {
+        var scrollToTopButton = document.getElementById('scrollToTopButton');
+        if (window.scrollY > 0) {
+          scrollToTopButton.style.display = 'block';
+        } else {
+          scrollToTopButton.style.display = 'none';
+        }
+      });
+
+      var scrollToTopButton = document.getElementById('scrollToTopButton');
+      scrollToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+
+
+
+
+
 
       window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.nav');
-        const scrolled = window.scrollY > 0;
+      const navbar = document.querySelector('.nav');
+      const scrolled = window.scrollY > 0;
 
-        if (scrolled) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-        });
+      if (scrolled) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      });
 
     </script>
-</body>
 </html>

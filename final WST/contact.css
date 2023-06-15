@@ -11,12 +11,11 @@ body{
 
 
 .logo img {
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100px;
+  height: auto;
 }
 
 .nav {
-  position: sticky;
   overflow: hidden;
   top: 0;
   text-align: center;
@@ -49,9 +48,8 @@ body{
 }
 
 .aside {
-  background-image: url(aur\ \(5\)\ -\ Copy.jpg);
+  background-image: url(contact.jpg);
   background-size: cover;
-  height: 605px;
   flex: 30%;
 }
 
@@ -68,15 +66,16 @@ body{
   font-size: 35px;
   text-align: center;
   margin-bottom: 0px;
-  color: #f96428;
+  color: #ecbb45;
 }
 
 .contact p {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  color: #c14ea3;
+  color: #fff;
   margin-bottom: 40px;
+  margin-left: 20px;
 }
 
 .row2 {
@@ -85,8 +84,12 @@ body{
   padding: 20px;
 }
 
-.fillup {
-  flex: 50%;
+.fillup1 {
+  flex: 40%;
+}
+
+.fillup2 {
+  flex: 60%;
 }
 
 .input {
@@ -103,6 +106,13 @@ body{
   background: transparent;
 }
 
+#messageInput {
+  padding-left: 10px;
+  padding-bottom: 200px;
+  background-color: #00204d;
+  border-bottom: 3px solid #011b40;
+}
+
 .serviceb {
   display: flex;
   justify-content: center;
@@ -110,26 +120,24 @@ body{
 }
 
 ::placeholder {
-  color: #ecbb4556;
+  color: #ecba45c7;
 }
 
 button {
   background-color: transparent;
-  padding: 10px;
-  border: 3px #2099f2 solid;
-}
-
-button a {
+  padding: 15px;
+  border: 3px #ecbb45 solid;  
   text-decoration: none;
-  font-family: monospace;
   font-size: 15px;
   font-weight: bold;
-  color: #2099f2;
-  padding: 0px 20px;
+  color: #ecbb45;
 }
 
 button:hover {
-  background-color: #209af263;
+  color: #011b40  ;  
+  background-color: #ecbb45;
+  border: 3px #2399ed00 solid;
+  cursor: pointer;
 }
 
 .info {
@@ -156,18 +164,6 @@ button:hover {
   margin-right: 10px;
 }
 
-.address {
-  display: flex;
-}
-
-.email {
-  display: flex;
-}
-
-.pnumber {
-  display: flex;
-}
-
 .logos {
   display: flex;
   justify-content: center;
@@ -176,9 +172,79 @@ button:hover {
 .logos img{
   height: 30px;
   width: auto;
-  margin: 15px 10px;
+  margin: 5px 10px;
+}
+
+
+
+#footer{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #ecbb45;;
+  padding: 10px;
+  background-color: #00122b;
+}
+#footer .about{
+flex: 60%;
+text-align: left;
+padding-right: 100px;
+}
+#footer h5 {
+  font-size: 20px;
+}
+#footer p {
+text-align: justify;
+color: #fff;
+font-size: 16px;
+}
+#footer .menu {
+flex: 15%;
+text-align: left;
+}
+#footer .menu a {
+display: flex;
+justify-content: left;
+text-decoration: none;
+color: white;
+font-size: 20px;
+}
+#footer .address {
+flex: 25%;
+}
+#footer .address h5, p {
+display: flex;
+justify-content: left;
+text-align: left;
+text-decoration: none;
+}
+
+
+@media screen and (max-width: 750px){
+  .row2 {
+    display: inline-block;
+  }
+  
+  #footer {
+    display:inline-block;
   }
 
+  #footer .about {
+  padding-right: 0px;
+  }
+
+  #footer .menu {
+    text-align: center;
+  }
+
+  #footer .menu a {
+    justify-content: center;
+  }
+
+  .logos {
+    justify-content: left;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .row {

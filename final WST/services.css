@@ -10,7 +10,7 @@ body{
   
 }
 .header{
-  background-image: url("aur\ \(5\).jpg");
+  background-image: url("header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left ;
@@ -41,7 +41,6 @@ font-size: 80px;
   top: 0;
   text-align: center;
   margin-right: 200px;
-  transition: background-color 0.3 ease-in-out;
 }
 
   
@@ -56,7 +55,6 @@ font-size: 80px;
   font-size: 20px;
   color: #fff;
   padding: 20px 20px;
-  transition: background-color 0.3 ease-in-out;
 }
 
 .services {  
@@ -198,6 +196,46 @@ font-size: 80px;
   border-color: #55acee transparent transparent #55acee;}
 
 
+
+#selectedItems {
+  font-size: 15px;
+  color: #fff;
+  margin-left: 250px;
+}
+
+#totalAmount {
+  font-size: 20px;
+}
+
+
+.selectPayment {
+  color: #fff;
+  font-size: 35px;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+#payment-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.payment-method {
+  margin: 0px 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.payment-method:hover {
+  transform: scale(1.25);
+}
+
+.selected {
+  transform: scale(1.25);
+}
+
+
 .message {
   padding: 20px;
   font-size: 16px;
@@ -227,9 +265,14 @@ input#message {
   justify-content: center;
   width: 100%;
   padding-bottom: 200px;
-  border: 1px solid #ccc;
+  border: 1px solid #00204d;
   font-size: 16px;
-  color: #333;
+  color: #ecbb45;
+  background-color: #00204d;
+}
+
+::placeholder {
+  color: #ecba45c7;
 }
 
 input[type="submit"] {
@@ -247,6 +290,63 @@ input[type="submit"]:hover {
   transform: scale(1.15);
 }
 
+
+#footer{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #ecbb45;;
+  padding: 10px;
+  background-color: #00122b;
+}
+#footer .about{
+flex: 60%;
+text-align: left;
+padding-right: 100px;
+}
+#footer h5 {
+  font-size: 20px;
+}
+#footer p {
+text-align: justify;
+color: #fff;
+font-size: 16px;
+}
+#footer .menu {
+flex: 15%;
+text-align: left;
+}
+#footer .menu a {
+display: flex;
+justify-content: left;
+text-decoration: none;
+color: white;
+font-size: 20px;
+}
+#footer .address {
+flex: 25%;
+}
+#footer .address h5, p {
+display: flex;
+justify-content: left;
+text-align: left;
+text-decoration: none;
+}
+.logos {
+  display: flex;
+  justify-content: left;
+}
+.logos img{
+  height: 30px;
+  width: auto;
+  margin: 5px 10px;
+  }
+
+@media screen and (max-width: 1220px){
+  #footer {
+    display:inline-block;
+  }
+}
 
 
 @media screen and (max-width: 700px) {
